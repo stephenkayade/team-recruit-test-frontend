@@ -14,6 +14,7 @@ const UserModal = ({ data, closeModal }: Partial<any>) => {
   const [activeExpIndex, setActiveExpIndex] = useState<number>(0)
   const [step, setStep] = useState<number>(0)
   const [keyPress, setKeyPress] = useState<boolean>(false)
+  const [success, setSuccess] = useState<boolean>(false)
   const [focus, setFocus] = useState({
     card: false,
     cvv: false,
@@ -58,15 +59,17 @@ const UserModal = ({ data, closeModal }: Partial<any>) => {
     }
   }
 
-  const close = () => {
-  }
-
-  const pay = (e: any) => {
-
+  const action = (e: any, type: string) => {
     e.preventDefault()
-    setCardDetails({ ...cardDetails, expiry: [...accountDetails.expiry], card: getLastNum() })
-    setStep(1)
 
+    setCardDetails({ ...cardDetails, expiry: [...accountDetails.expiry], card: getLastNum() })
+
+    if (type === 'close') {
+      closeModal()
+    }
+    if (type === 'pay') {
+      setSuccess(true)
+    }
   }
 
   const handlePrint = useReactToPrint({
@@ -131,7 +134,7 @@ const UserModal = ({ data, closeModal }: Partial<any>) => {
       <div ref={userRef} className="fixed inset-0 opacity-80" style={{ background: `url(../../../images/windows-11.jpg)` }}></div>
 
       {
-        step === 1 &&
+        success === true &&
 
         <div className="md:hidden fixed block z-30 bg-white inset-0">
 
@@ -226,7 +229,7 @@ const UserModal = ({ data, closeModal }: Partial<any>) => {
 
                 <div className='pt-4'>
 
-                  <button onClick={() => closeModal()} className='py-4 w-full bg-blue-color rounded-lg mt-2 font-bold text-white'>Close</button>
+                  <button onClick={(e) => action(e, 'close')} className='py-4 w-full bg-blue-color rounded-lg mt-2 font-bold text-white'>Close</button>
                 </div>
               </div>
 
@@ -238,10 +241,10 @@ const UserModal = ({ data, closeModal }: Partial<any>) => {
 
       }
 
-      <div className="fixed bg-white md:inset-x-96 sm:inset-x-0 md:inset-y-20 inset-y-0">
+      <div className="fixed bg-white md:inset-x-10 xl:inset-x-96 lg:inset-20 sm:inset-x-0 md:inset-y-20 xl:inset-y-20 lg:inset-y-20 inset-y-0">
 
         <div className="absolute top-0 right-0 bg-gray-50 px-3 py-2 cursor-pointer">
-          <IoMdClose onClick={() => close()} className='text-xl text-gray-600' />
+          <IoMdClose onClick={(e) => action(e, 'close')} className='text-xl text-gray-600' />
         </div>
 
 
@@ -317,7 +320,7 @@ const UserModal = ({ data, closeModal }: Partial<any>) => {
                           delimiter: "  -  ",
                           numericOnly: true
                         }}
-                        value={accountDetails.card}
+                        value={data.card}
                         onChange={(e) => { setAccountDetails({ ...data, card: e.target.value }) }}
                         onMouseEnter={() => setFocus({ ...focus, card: true })}
                         onMouseLeave={() => setFocus({ ...focus, card: false })}
@@ -424,7 +427,7 @@ const UserModal = ({ data, closeModal }: Partial<any>) => {
                       </div>
                     </div>
                   </div>
-                  <button onClick={(e) => pay(e)} className='py-5 w-full bg-blue-color rounded-lg mt-3 font-bold text-white text-[18px]'>Pay Now</button>
+                  <button onClick={(e) => action(e, 'pay')} className='py-5 w-full bg-blue-color rounded-lg mt-3 font-bold text-white text-[18px]'>Pay Now</button>
                 </div>
 
                 <div className="md:px-5 sm:px-0"></div>

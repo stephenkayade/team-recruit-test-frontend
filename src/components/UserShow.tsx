@@ -19,7 +19,7 @@ const UserShow = ({ users }: any) => {
 
         return (
 
-            <div key={user.orderNumber} className='bg-white flex flex-col px-8 justify-end rounded-xl py-7 md:mb-0 mb-4'>
+            <div key={user.orderNumber} className='bg-white flex flex-col px-8 justify-end rounded-xl py-7 md:mb-0 mb-4 md:h-full'>
 
                 <div className='flex justify-between items-center w-full leading-9 pb-5'>
 
@@ -91,7 +91,7 @@ const UserShow = ({ users }: any) => {
 
     return (
         <>
-            <div className="md:grid md:grid-cols-5 place-content-center block gap-9 p-9 users">
+            <div className="md:grid md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 place-content-center block gap-9 p-9 users">
 
                 {renderedUsers}
             </div>

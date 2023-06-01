@@ -13,15 +13,15 @@ const UsersList = () => {
     }
 
     const data: IUserDetails[] = [
-        { name: 'Timilehin Ilori', card: '', expiry: new Array(2).fill('00') , cvv: '', company: 'Apple', orderNumber: randomOrderNumber(12, alphabet), product: 'Macbook Air 2022', vat: 100, payment: 300 },
-        { name: 'Timilehin Agata', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Samsung', orderNumber: randomOrderNumber(12, alphabet), product: 'Samsung S20', vat: 100, payment: 500 },
-        { name: 'Timilehin Alapa', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Infinix', orderNumber: randomOrderNumber(12, alphabet), product: 'Infinix Note in 9', vat: 100, payment: 440 },
-        { name: 'Timilehin Ogo', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Samsung', orderNumber: randomOrderNumber(12, alphabet), product: 'Samsung S9', vat: 100, payment: 240 },
-        { name: 'Timilehin Adewuyi', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Nokia', orderNumber: randomOrderNumber(12, alphabet), product: 'Nokia Lumia', vat: 100, payment: 125 },
-        { name: 'Timilehin Francis', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Apple', orderNumber: randomOrderNumber(12, alphabet), product: 'Macbook Pro 2020', vat: 100, payment: 400 },
-        { name: 'Timilehin Francis', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Apple', orderNumber: randomOrderNumber(12, alphabet), product: 'Macbook Pro 2020', vat: 100, payment: 400 },
-        { name: 'Timilehin Francis', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Apple', orderNumber: randomOrderNumber(12, alphabet), product: 'Macbook Pro 2020', vat: 100, payment: 400 },
-        { name: 'Timilehin Francis', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Apple', orderNumber: randomOrderNumber(12, alphabet), product: 'Macbook Pro 2020', vat: 100, payment: 400 },
+        { name: 'Franklin cena', card: '', expiry: new Array(2).fill('00') , cvv: '', company: 'Apple', orderNumber: randomOrderNumber(12, alphabet), product: 'Macbook Air 2022', vat: 100, payment: 300 },
+        { name: 'Josep stephen', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Samsung', orderNumber: randomOrderNumber(12, alphabet), product: 'Samsung S20', vat: 100, payment: 500 },
+        { name: 'Gerrad guily', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Infinix', orderNumber: randomOrderNumber(12, alphabet), product: 'Infinix Note in 9', vat: 100, payment: 440 },
+        { name: 'Timilehin ogo', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Samsung', orderNumber: randomOrderNumber(12, alphabet), product: 'Samsung S9', vat: 100, payment: 240 },
+        { name: 'Ori zeruiah', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Nokia', orderNumber: randomOrderNumber(12, alphabet), product: 'Nokia Lumia', vat: 100, payment: 125 },
+        { name: 'Jeremiah samuel', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Apple', orderNumber: randomOrderNumber(12, alphabet), product: 'Macbook Pro 2021', vat: 100, payment: 1000 },
+        { name: 'Jade Francis', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Apple', orderNumber: randomOrderNumber(12, alphabet), product: 'Macbook Pro 2022', vat: 100, payment: 1400 },
+        { name: 'Wayne ronald', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Apple', orderNumber: randomOrderNumber(12, alphabet), product: 'Macbook Pro 2012', vat: 100, payment: 50 },
+        { name: 'Kayode Gboy', card: '', expiry: new Array(2).fill('00'), cvv: '', company: 'Apple', orderNumber: randomOrderNumber(12, alphabet), product: 'Macbook Pro 2023', vat: 100, payment: 2000 },
     ]
 
     return (
